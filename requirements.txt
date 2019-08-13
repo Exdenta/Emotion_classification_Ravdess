@@ -1,6 +1,6 @@
 # versions of the libs are just the ones that I used
 setuptools>=41.0.0
-tensorflow-gpu==1.14.0
+tensorflow-gpu>=1.5.0,<=1.12.0
 numpy==1.17
 opencv-python==4.1.0.25
 matplotlib==3.1

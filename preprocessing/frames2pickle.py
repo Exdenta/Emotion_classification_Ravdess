@@ -79,7 +79,6 @@ def toOneHot(number, emotions_count):
     arr[0][number] = 1
     return arr[0]
 
-# Form data
 def get_data(frames_folder, save_folder):
     data = []
 
