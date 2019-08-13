@@ -11,8 +11,18 @@ import imutils
 from imutils.face_utils import FaceAligner
 from keras.models import load_model, model_from_json
 
-emotions_ru = ["нейтрален", "спокоен", "счастлив", "грустен", "сердит", "напуган", "отвращение", "удивлен"]
+#     N   EN
+#     0 = neutral
+#     1 = calm
+#     2 = happy
+#     3 = sad
+#     4 = angry
+#     5 = fearful
+#     6 = disgust
+#     7 = surprised
+
 emotions_en = ["neutral", "calm", "happy", "sad", "angry", "fearful", "disgust", "surprised"]
+emotions_ru = ["нейтральное состояние", "спокойствие", "радость", "грусть", "злость", "испуг", "отвращение", "удивление"]
 
 parser = argparse.ArgumentParser(description='Emotion recognition')
 parser.add_argument('--camera_number', type=int, default=0)

@@ -19,11 +19,24 @@ pip install -r requirements.txt
 
 [Here](https://www.tensorflow.org/install/source_windows) you can find a compatible version of tensorflow-gpu if you have a different version of CUDA and cuDNN.
 
-# Run emotion detector
+# Run pretrained emotion classificator
 
+Runs emotion detector with default parameters (webcam, base model, etc.)
 ```powershell
 python .\emotion_detector.py
 ```
+
+You can also specify --input that can be camera, image or video. 
+
+1. In camera mode you can specify its number (--camera_number), output directory, where results will be saved (--output_dir), emotion classification model path (--model), threshold for face detector (--conf_threshold). Example:
+```powershell
+python .\emotion_detector.py --camera_number 1 --output_dir 'D:\\Results' --model 'path_to_model' --conf_threshold 0.9
+``` 
+
+2. In image and video mode you can also specify the path to the image or video (--source). Example:
+```powershell
+python .\emotion_detector.py --input image --source 'path_to_image'
+``` 
 
 # Prepare data to train emotion classificator
 
@@ -51,7 +64,10 @@ python preprocessing/frames2pickle.py
 
 # Train emotion classificator
 
+```powershell
+python train.py
+```
 
 # Test your emotion classificator
 
-
+Run jupyter notebook file `test.ipynb` to evaluate your model
