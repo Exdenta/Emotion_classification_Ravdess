@@ -17,7 +17,7 @@ py -m venv env
 pip install -r requirements.txt 
 ```
 
-[Here](https://www.tensorflow.org/install/source_windows) you can find a compatible version of tensorflow-gpu if you have a different version of CUDA and cuDNN.
+[Here](https://www.tensorflow.org/install/source_windows#gpu) you can find a compatible version of tensorflow-gpu if you have a different version of CUDA and cuDNN.
 
 # Run pretrained emotion classificator
 
